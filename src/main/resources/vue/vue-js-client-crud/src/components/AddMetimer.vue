@@ -38,7 +38,6 @@
                   <div>
                     <b-form-datepicker id="tag" v-model="metimer.tag" class="mb-2"></b-form-datepicker>
                     <b-form-timepicker id="zeit" now-button v-model="metimer.zeit" show-seconds ></b-form-timepicker>
-                    <p>Tag: '{{metimer.tag}}'    -   Zeit: '{{metimer.zeit}}'</p>
                   </div>
             </div>
       <button @click="saveMetimer" class="btn btn-success">Speichern</button>
@@ -71,9 +70,7 @@ export default {
     };
   },
   methods: {
-
     saveMetimer() {
-
       var data = {
         title: this.metimer.title,
         beschreibung: this.metimer.beschreibung,

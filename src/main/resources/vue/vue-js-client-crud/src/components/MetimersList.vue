@@ -80,7 +80,8 @@ export default {
     retrieveMetimers() {
       MetimerDataService.getAll()
         .then(response => {
-          this.metimers = response.data;
+            this.metimers = response.data;
+
           console.log(response.data);
         })
         .catch(e => {
