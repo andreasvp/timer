@@ -1,12 +1,3 @@
-CREATE TABLE metimer (
-  id BIGINT NOT NULL,
-  title VARCHAR(255),
-  beschreibung VARCHAR(255),
-  sprecher VARCHAR(255),
-  zeitpunkt TIMESTAMP WITHOUT TIME ZONE,
-  CONSTRAINT pk_metimer PRIMARY KEY (id)
-);
-
 INSERT INTO metimer (id, title, beschreibung, sprecher, zeitpunkt) VALUES
 (1, 'Docker', '.... in dem Entwicklungsprozess nutzen und die Vorteile werden uns glücklicher und besser machen.', 'MH', PARSEDATETIME('2023-10-17 20:30:09', 'yyyy-MM-DD HH:mm:ss'));
 INSERT INTO metimer (id, title, beschreibung, sprecher, zeitpunkt) VALUES

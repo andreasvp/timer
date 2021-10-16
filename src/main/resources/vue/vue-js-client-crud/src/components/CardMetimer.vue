@@ -1,19 +1,23 @@
 <template>
     <div>
-        <div class="card-deck">
-            <div class="card mb-3" style="width: 18rem;"
+
+        <div class="row">
+            <div class="col-sm-3"
                             v-for="(metimer, index) in metimers"
                             :key="index" >
-                <div class="card-body">
-                    <div class="card-header text-center text-white bg-success" :id="'Counter' + index" :timer="metimer.zeitpunkt"></div>
+                <div class="card mb-3">
                     <div class="card-body">
-                        <h5 class="card-title">{{ metimer.title }}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">{{ metimer.sprecher }}</h6>
-                        <p class="card-text">{{ metimer.beschreibung }}</p>
+                        <div class="card-header text-center text-white bg-success" :id="'Counter' + index" :timer="metimer.zeitpunkt"></div>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ metimer.title }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ metimer.sprecher }}</h6>
+                            <p class="card-text">{{ metimer.beschreibung }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
 <!-- Display the countdown timer in an element -->
 </template>
@@ -55,7 +59,6 @@ export default {
     this.retrieveMetimers();
   }
 };
-
 
 // Update the count down every 1 second
 var x = setInterval(function() {
